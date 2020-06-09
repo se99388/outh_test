@@ -1,10 +1,10 @@
 const express = require('express');
 const {getNetSuiteRestlet} = require('../../api_netsuite/api_netsuite');
 const {access2} = require('../index.js');
+
+console.log(module.filename, access2);
+
 const router = express.Router();
-
-
-console.log("netsuite file: ", access2);
 
 
 router.get('/get', async (req,res)=>{

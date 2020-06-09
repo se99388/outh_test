@@ -5,10 +5,9 @@ const port = 3000;
 const fs = require('fs');
 const https = require('https');
 const routes = require('./routes').router;
-
 const {access2} = require('./routes');
 
-console.log("main index: ", access2);
+console.log(module.filename, access2);
 
 const httpsOptions = {
     cert: fs.readFileSync('ssl/cert.pem'),
